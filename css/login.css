@@ -1,0 +1,73 @@
+/* General Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "SanSerif", sans-serif;
+    color: #243238;
+}
+
+/* White Background for the Page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff; /* White background */
+}
+
+/* Wrapper for Logo and Login Container */
+.login_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5em; /* Adds space between logo and login form */
+}
+
+/* Logo Styling */
+.logo {
+    width: 630px; /* Adjust size as needed */
+    height: auto;
+}
+
+/* Login Container Styling */
+.login_container {
+    background-color: #0C254B;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Header Styling */
+h1 {
+    color: white;
+    margin-bottom: 1em;
+}
+
+/* Input Fields Styling */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button Styling */
+button {
+    background-color: #F41F00;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #E1E00B;
+    font-weight: bold;
+    color: black;
+}

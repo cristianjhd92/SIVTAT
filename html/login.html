@@ -3,21 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titulo de la pagina -->
     <title>Login - La Junior Productos Alimenticios</title>
+    <!-- Conexion con el archivo de estilos -->
     <link rel="stylesheet" href="../css/login.css">
 </head>
+
 <body>
+    <!-- Contenedor principal -->
     <div class="login_wrapper">
-        <img src="../img/logo_la_junior_lg.jpg" alt="La Junior Productos Alimenticios" class="logo">
+        <!-- Logo de la empresa -->
+        <img src="../img/logo_la_junior_right.jpg" alt="La Junior Productos Alimenticios" class="logo">
+        
+        <!-- Contenedor del formulario de login -->
         <div class="login_container">
+            <!-- Titulo del formulario -->
             <h1>Iniciar Sesión</h1>
+            <!-- Formulario de login -->
             <form id="login_form" action="dashboard.html" method="POST">
+                <!-- Campo de usuario -->
                 <input type="text" name="username" placeholder="Usuario" required>
                 <input type="password" name="password" placeholder="Contraseña" required>
+                <!-- Boton de enviar el formulario -->
                 <button type="submit">Ingresar</button>
             </form>
+        
         </div>
+    
     </div>
+    
+    <!-- Conexion con el archivo de javascript -->
     <script src="../js/login.js"></script>
 </body>
 </html>

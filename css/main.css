@@ -1,0 +1,133 @@
+/* Reinicio y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "SanSerif", sans-serif;
+}
+
+/* Encabezado superior con logos en los extremos y nombre de la empresa centrado */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space-between distribuye los elementos de manera equitativa */
+    width: 100%; /* Ancho del contenedor */
+    padding: 10px 0; /* Espacio entre el contenido y los bordes */
+    background-color: #ffffff;
+    height: 80px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad el 0.5 al último es para el lado inferior */
+}
+
+.header_text {
+    text-align: center;
+}
+
+.header_text h2 {
+    font-size: 1.5em; /* Cada em son 16px */
+    color: #0C254B;
+}
+
+.header_text p {
+    color: #F41F00;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.logo_left, .logo_right {
+    width: 180px;
+    height: auto;
+}
+
+/* Barra lateral izquierda - Administración */
+.sidebar_left {
+    width: 250px;
+    background-color: #0C254B;
+    color: white;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    height: calc(100vh - 80px); /* calc() permite calcular el valor de una propiedad CSS */
+    padding: 1em;
+    border-top-right-radius: 15px;
+    overflow-y: auto; /*overflow-y: auto; permite que el contenido se desplace verticalmente si es necesario */
+}
+
+.sidebar_left .menu_title {
+    text-align: center;
+    font-size: 1.2em;
+    color: #E1E00B;
+    margin-bottom: 1em; /* margin-bottom permite que haya un espacio entre el título y el primer elemento del menú */
+}
+
+/* Barra lateral derecha - Información */
+.sidebar_right {
+    width: 250px;
+    background-color: #0C254B;
+    color: white;
+    position: fixed; /* position: fixed; permite que el elemento se mantenga en la misma posición en la pantalla, incluso si se desplaza */
+    top: 80px; /* top: permite que el elemento comience a aparecer a partir de la línea 80 de la pantalla */
+    right: 0;
+    height: calc(100vh - 80px);
+    padding: 1em;
+    border-top-left-radius: 15px;
+    overflow-y: auto;
+}
+
+.sidebar_right .menu_title {
+    text-align: center;
+    font-size: 1.2em;
+    color: #E1E00B;
+    margin-bottom: 1em;
+}
+
+/* Menú de navegación */
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    margin-bottom: 1em;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em; /* Ajuste de tamaño de letra */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Flecha alineada a la derecha */
+    border-radius: 8px;
+    transition: all 0.3s ease; /* Transición suave tardan 0.3 segundos */
+}
+
+.arrow {
+    margin-left: auto;
+    font-size: 0.9em;
+}
+
+.menu li a:hover {
+    background-color: #E1E00B;
+    color: black;
+    font-weight: bold;
+}
+
+.menu li a.active {
+    background-color: #F41F00;
+    color: white;
+}
+
+.submenu {
+    display: none; /* Ocultar submenús por defecto */
+    padding-left: 1em;
+}
+
+.menu li:hover .submenu {
+    display: block; /* Mostrar submenús al hacer hover */
+}
+
+/* Contenido principal */
+.main_content {
+    margin: 80px 270px; /* Espacio para los menús laterales */
+    padding: 2em;
+}

@@ -1,4 +1,4 @@
-/* General Reset and Styling */
+/* Reseteo de todos los estilos */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
     color: #243238;
 }
 
-/* White Background for the Page */
+/* Estilos para el contenedor del logo y el formulario */
 body {
     display: flex;
     justify-content: center;
@@ -16,20 +16,20 @@ body {
     background-color: #ffffff; /* White background */
 }
 
-/* Wrapper for Logo and Login Container */
+/* Estilos para el contenedor del formulario */
 .login_wrapper {
     display: flex;
     align-items: center;
-    gap: 0.5em; /* Adds space between logo and login form */
+    gap: 0.5em; /* Añade un espacio entre el logo y el formulario */
 }
 
-/* Logo Styling */
+/* Estilos para el logo */
 .logo {
-    width: 630px; /* Adjust size as needed */
+    width: 630px; /* Ajusta el ancho del logo */
     height: auto;
 }
 
-/* Login Container Styling */
+/* Contenedor del formulario */
 .login_container {
     background-color: #0C254B;
     padding: 2em;
@@ -39,14 +39,14 @@ body {
     text-align: center;
 }
 
-/* Header Styling */
+/* Estilos para el título */
 h1 {
     color: white;
     margin-bottom: 1em;
 }
 
-/* Input Fields Styling */
-input[type="text"],
+/* Estilos para los campos de texto y contraseña */
+input[type="text"], /* Se usa [] para seleccionar múltiples elementos */
 input[type="password"] {
     width: 100%;
     padding: 10px;
@@ -55,7 +55,7 @@ input[type="password"] {
     border-radius: 5px;
 }
 
-/* Button Styling */
+/* Estilos para el botón */
 button {
     background-color: #F41F00;
     color: white;
@@ -63,9 +63,10 @@ button {
     border: none;
     border-radius: 5px;
     width: 100%;
-    cursor: pointer;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
 }
 
+/* Estilos para el botón al pasar sobre él */
 button:hover {
     background-color: #E1E00B;
     font-weight: bold;

@@ -1,0 +1,96 @@
+/* Contenedor de edición de usuario */
+.edit_user_container {
+    max-width: 700px;
+    margin: 10px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+/* Estilo de título */
+.edit_user_container h1 {
+    text-align: center;
+    color: #0C254B;
+    margin-bottom: 20px;
+}
+
+/* Estilo de filas del formulario */
+.form_row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que se ajusten en dispositivos móviles */
+}
+
+/* Grupos de formulario */
+.form_group {
+    flex: 1;
+    min-width: 300px; /* Ancho mínimo para campos de formulario */
+    margin-bottom: 15px;
+}
+
+/* Estilos de etiqueta */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #0C254B;
+    font-weight: bold;
+}
+
+/* Campos de entrada y selección */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+/* Placeholder */
+input::placeholder {
+    color: #888;
+}
+
+/* Estilos específicos para el campo desplegable de "Tienda Asignada" */
+select#store {
+    color: #243238; /* Color de texto */
+    background-color: #f3f3f3; /* Fondo */
+    font-weight: normal;
+}
+
+/* Botón de acción */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #F41F00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+/* Estilos cuando el cursor está sobre el botón */
+button:hover {
+    background-color: #E1E00B;
+    color: black;
+}
+
+/* Estilos adicionales para el checkbox de actualización de contraseña */
+.update_password_container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Estilos para el checkbox */
+.update_password_container label {
+    margin-left: 8px;
+    color: #0C254B;
+    font-weight: normal;
+}

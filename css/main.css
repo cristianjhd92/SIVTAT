@@ -16,23 +16,28 @@
     background-color: #ffffff;
     height: 80px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad el 0.5 al último es para el lado inferior */
+    position: fixed; /* Fija el encabezado en la parte superior */
 }
 
+/* Estilos para el texto del encabezado */
 .header_text {
     text-align: center;
 }
 
+/* Estilos para el título del encabezado */
 .header_text h2 {
     font-size: 1.5em; /* Cada em son 16px */
     color: #0C254B;
 }
 
+/* Estilos para el subtítulo del encabezado */
 .header_text p {
     color: #F41F00;
     font-size: 1em;
     font-weight: bold;
 }
 
+/* Estilos para los logos en los extremos del encabezado */
 .logo_left, .logo_right {
     width: 180px;
     height: auto;
@@ -52,6 +57,7 @@
     overflow-y: auto; /*overflow-y: auto; permite que el contenido se desplace verticalmente si es necesario */
 }
 
+/* Estilos para el título del menú izquierdo */
 .sidebar_left .menu_title {
     text-align: center;
     font-size: 1.2em;
@@ -73,6 +79,7 @@
     overflow-y: auto;
 }
 
+/* Estilos para el título del menú derecho */
 .sidebar_right .menu_title {
     text-align: center;
     font-size: 1.2em;
@@ -85,14 +92,16 @@
     list-style: none;
 }
 
+/* Estilos para los elementos del menú */
 .menu li {
     margin-bottom: 1em;
 }
 
+/* Estilos para los enlaces del menú */
 .menu li a {
     color: white;
     text-decoration: none;
-    font-size: 0.9em; /* Ajuste de tamaño de letra */
+    font-size: 0.8em; /* Ajuste de tamaño de letra */
     padding: 10px;
     display: flex;
     align-items: center;
@@ -101,33 +110,64 @@
     transition: all 0.3s ease; /* Transición suave tardan 0.3 segundos */
 }
 
+/* Flecha para indicar que hay submenús */
 .arrow {
     margin-left: auto;
     font-size: 0.9em;
 }
 
+/* Estilos para los enlaces del menú cuando se pasa el cursor por encima */
 .menu li a:hover {
     background-color: #E1E00B;
     color: black;
     font-weight: bold;
 }
 
+/* Estilos para el enlace del menú que está activo */
 .menu li a.active {
     background-color: #F41F00;
     color: white;
 }
 
+/* Estilos para los submenús */
 .submenu {
     display: none; /* Ocultar submenús por defecto */
     padding-left: 1em;
 }
 
+/* Estilos para los elementos del submenú */
 .menu li:hover .submenu {
     display: block; /* Mostrar submenús al hacer hover */
 }
 
+/* Estilo para el menú principal seleccionado */
+.menu_item.active {
+    background-color: #F41F00; /* Rojo */
+    color: white;
+}
+
+/* Estilo para el submenú seleccionado */
+.submenu a.selected {
+    background-color: #E1E00B; /* Amarillo */
+    color: black;
+}
+
 /* Contenido principal */
 .main_content {
-    margin: 80px 270px; /* Espacio para los menús laterales */
-    padding: 2em;
+    padding: 6em;
 }
+
+/* Estilos para el contenido principal */
+.main_center{
+    padding-left: 28em; /* Ajuste de margen izquierdo */
+    padding-top: 8em;
+    justify-content: center;
+    justify-items: center;
+}
+
+/* Estilos para el logo principal */
+.logo_main{
+    width: 250px;
+    opacity: 0.5;
+}
+

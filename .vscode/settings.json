@@ -1,0 +1,4 @@
+//Puerto por el que funciona el servidor
+{
+    "liveServer.settings.port": 5502
+}

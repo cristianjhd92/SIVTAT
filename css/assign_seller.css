@@ -69,6 +69,7 @@ button {
 button:hover {
     background-color: #E1E00B;
     color: black;
+    font-weight: bold;
 }
 
 /* Tabla de asignaciones */

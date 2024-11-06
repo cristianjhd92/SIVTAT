@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú principal - La Junior Productos Alimenticios</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/edit_vehicle.css">
+    <link rel="stylesheet" href="../css/create_order.css">
 
 </head>
 
@@ -27,7 +27,7 @@
     
     </div>
 
-    <!-- Menú lateral izquierdo con título "Administración" -->
+    <    <!-- Menú lateral izquierdo con título "Administración" -->
     <div class="sidebar_left">
         <h3 class="menu_title">Administración</h3>
         
@@ -119,45 +119,102 @@
     
     </div>
     
+    </div>
+    
     <!-- Contenido principal -->
     <div class="main_content">
-        <div class="edit_vehicle_container">
-            <h1>Editar Vehículo</h1>
-            <form id="edit_vehicle_form">
-                <div class="form_row">
-                    <div class="form_group">
-                        <label for="plate">Placa:</label>
-                        <input type="text" id="plate" name="plate" disabled> <!-- Placa inmutable -->
-                    </div>
-                    <div class="form_group">
-                        <label for="model">Modelo:</label>
-                        <input type="text" id="model" name="model" required>
-                    </div>
-                </div>
-                
-                <div class="form_row">
-                    <div class="form_group">
-                        <label for="brand">Marca:</label>
-                        <input type="text" id="brand" name="brand" required>
-                    </div>
-                    <div class="form_group">
-                        <label for="status">Estado:</label>
-                        <select id="status" name="status" required>
-                            <option value="activo">Activo</option>
-                            <option value="inactivo">Inactivo</option>
+        <div class="order_form_container">
+            <h2>Crear Orden de Compra</h2>
+            <form id="order_form">
+                <label for="order_number">Número de Orden:</label>
+                <input type="text" id="order_number" disabled>
+        
+                <label for="order_date">Fecha de Orden:</label>
+                <input type="date" id="order_date" disabled>
+        
+                <label for="store_name">Nombre de la Tienda:</label>
+                <select id="store_name" onchange="loadAssignedSeller()">
+                    <!-- Opciones de tiendas cargadas dinámicamente -->
+                </select>
+        
+                <label for="assigned_seller">Vendedor Asignado:</label>
+                <input type="text" id="assigned_seller" placeholder="Nombre del vendedor asignado" disabled>
+        
+                <label for="category_filter">Selecciona la Categoría:</label>
+                <select id="category_filter" onchange="filterProductsByCategory()">
+                    <!-- Opciones de categorías cargadas dinámicamente -->
+                </select>
+        
+                <div id="product_list">
+                    <h3>Productos</h3>
+                    <div class="product_entry">
+                        <label>Producto:</label>
+                        <select class="product_select" onchange="updateProductDetails(this)">
+                            <!-- Opciones de productos cargadas dinámicamente según la categoría seleccionada -->
                         </select>
+        
+                        <label>Marca:</label>
+                        <input type="text" class="product_brand" disabled>
+        
+                        <label>Presentación:</label>
+                        <select class="presentation_select" onchange="updatePriceByPresentation(this)">
+                            <!-- Opciones de presentación cargadas dinámicamente según el producto seleccionado -->
+                        </select>
+        
+                        <label>Cantidad:</label>
+                        <input type="number" class="quantity_input" min="1" value="1" onchange="updateSubtotal(this)">
+        
+                        <label>Precio Unitario:</label>
+                        <input type="text" class="unit_price" disabled>
+        
+                        <label>Subtotal:</label>
+                        <input type="text" class="subtotal" disabled>
                     </div>
                 </div>
-
-                <button id="save_changes_button" type="button">Guardar Cambios</button>
+        
+                <button type="button" onclick="addProduct()" class="add_product_button">Agregar Producto</button>
+        
+                <!-- Tabla de resumen de productos añadidos -->
+                <h3>Resumen de Productos</h3>
+                <table id="product_summary_table">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Marca</th>
+                            <th>Presentación</th>
+                            <th>Precio Unitario</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product_summary_body">
+                        <!-- Filas de productos añadidos dinámicamente -->
+                    </tbody>
+                </table>
+        
+                <label for="order_total">Total de la Orden:</label>
+                <input type="text" id="order_total" disabled>
+        
+                <label for="payment_type">Tipo de Pago:</label>
+                <input type="text" id="payment_type" placeholder="Tipo de pago" required>
+        
+                <label for="payment_status">Estado del Pago:</label>
+                <input type="text" id="payment_status" placeholder="Estado del pago" required>
+        
+                <label for="comments">Comentarios:</label>
+                <textarea id="comments" placeholder="Escribe comentarios adicionales aquí"></textarea>
+        
+                <button type="button" onclick="saveOrder()" class="save_order_button">Guardar Orden</button>
             </form>
         </div>
+        
     </div>
     
 </body>
     
     <!-- Script para el menú desplegable -->
     <script src="../js/main.js"></script>
-    <script src="../js/edit_vehicle.js"></script>
+    <script src="../js/create_order.js"></script>
 
 </html>

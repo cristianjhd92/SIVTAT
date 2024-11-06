@@ -1,4 +1,25 @@
-// Función para guardar el nuevo usuario en Local Storage
+// Función para limpiar la lista de usuarios y establecer el usuario "Admin" predeterminado
+function resetUsersToDefault() {
+    // Limpiar el `localStorage` de usuarios
+    localStorage.removeItem('users');
+
+    // Crear el usuario "Admin" predeterminado
+    const defaultAdmin = {
+        firstName: "Admin",
+        lastName: "User",
+        email: "admin@lajunior.com", // Email correcto de la empresa
+        password: "1234",
+        role: "admin",
+        status: "active",
+        store: "Store La Junior", // Asignación para el usuario Admin
+        driver: ""
+    };
+
+    // Guardar solo el usuario Admin en Local Storage
+    localStorage.setItem('users', JSON.stringify([defaultAdmin]));
+}
+
+// Función para guardar un nuevo usuario en Local Storage
 function saveNewUser() {
     const firstName = document.getElementById('first_name').value;
     const lastName = document.getElementById('last_name').value;
@@ -48,3 +69,6 @@ document.getElementById('create_user_button').addEventListener('click', (event) 
     event.preventDefault(); // Prevenir el envío del formulario
     saveNewUser(); // Guardar el nuevo usuario
 });
+
+// Llamar a la función de limpieza y configuración de Admin predeterminado al cargar la página
+document.addEventListener("DOMContentLoaded", resetUsersToDefault);

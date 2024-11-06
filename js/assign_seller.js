@@ -11,10 +11,10 @@ function loadStores() {
     // Limpiar las opciones anteriores
     storeSelect.innerHTML = "";
     
-    if (stores.length > 1) { // Si hay más de una tienda (excluyendo la predeterminada)
+    if (stores.length > 1) { 
         storeSelect.innerHTML = '<option disabled selected>Escoge una tienda</option>';
         stores.forEach(store => {
-            if (store.name !== "La Junior") { // Excluir la tienda predeterminada
+            if (store.name !== "La Junior") { 
                 const option = document.createElement("option");
                 option.value = store.name;
                 option.textContent = store.name;
@@ -22,7 +22,6 @@ function loadStores() {
             }
         });
     } else {
-        // Mostrar mensaje "Crea una tienda" si no hay tiendas adicionales
         storeSelect.innerHTML = '<option disabled selected>Crea una tienda</option>';
     }
 }
@@ -31,21 +30,19 @@ function loadStores() {
 function loadSellers() {
     const users = JSON.parse(localStorage.getItem("users")) || [];
     
-    // Limpiar las opciones anteriores
     sellerSelect.innerHTML = "";
     
-    const vendors = users.filter(user => user.role === "vendedor"); // Filtrar solo los vendedores
+    const vendors = users.filter(user => user.role === "vendedor");
     
     if (vendors.length > 0) {
         sellerSelect.innerHTML = '<option disabled selected>Escoge un vendedor</option>';
         vendors.forEach(vendor => {
             const option = document.createElement("option");
-            option.value = `${vendor.firstName} ${vendor.lastName}`; // Asigna nombre y apellido al valor
+            option.value = `${vendor.firstName} ${vendor.lastName}`;
             option.textContent = `${vendor.firstName} ${vendor.lastName}`;
             sellerSelect.appendChild(option);
         });
     } else {
-        // Mostrar mensaje "Crea un vendedor" si no hay vendedores
         sellerSelect.innerHTML = '<option disabled selected>Crea un vendedor</option>';
     }
 }
@@ -75,27 +72,21 @@ function assignSeller() {
     const store = storeSelect.value;
     const seller = sellerSelect.value;
 
-    // Verificar si se seleccionaron tienda y vendedor
     if (!store || !seller) {
         alert("Por favor, seleccione una tienda y un vendedor.");
         return;
     }
 
-    // Obtener las asignaciones existentes
     const assignments = JSON.parse(localStorage.getItem("assignments")) || [];
-
-    // Verificar si la tienda ya tiene un vendedor asignado
     const existingAssignment = assignments.find(assignment => assignment.store === store);
     if (existingAssignment) {
         alert("Esta tienda ya tiene un vendedor asignado.");
         return;
     }
 
-    // Agregar la nueva asignación
     assignments.push({ store: store, seller: seller });
     localStorage.setItem("assignments", JSON.stringify(assignments));
 
-    // Recargar la lista de asignaciones
     loadAssignments();
 }
 
@@ -105,16 +96,28 @@ function removeAssignment(store) {
     assignments = assignments.filter(assignment => assignment.store !== store);
     localStorage.setItem("assignments", JSON.stringify(assignments));
 
-    // Recargar la lista de asignaciones
     loadAssignments();
 }
 
-// Llamar a las funciones de carga al inicio
+// Cargar el vendedor asignado para la tienda seleccionada en el formulario de orden
+function loadAssignedSellerForOrder() {
+    const storeName = document.getElementById("store_name").value;
+    document.getElementById("assigned_seller").value = getAssignedSeller(storeName);
+}
+
+// Obtener el vendedor asignado a una tienda específica
+function getAssignedSeller(storeName) {
+    const assignments = JSON.parse(localStorage.getItem("assignments")) || [];
+    const assignment = assignments.find(assignment => assignment.store === storeName);
+    return assignment ? assignment.seller : "Sin asignar";
+}
+
+// Asignar las funciones de inicialización
 document.addEventListener("DOMContentLoaded", () => {
     loadStores();
     loadSellers();
     loadAssignments();
+    document.getElementById("store_name").addEventListener("change", loadAssignedSellerForOrder);
 });
 
-// Asignar la función al botón de asignar vendedor
 assignButton.addEventListener("click", assignSeller);

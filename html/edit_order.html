@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú principal - La Junior Productos Alimenticios</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/edit_vehicle.css">
+    <link rel="stylesheet" href="../css/edit_order.css">
 
 </head>
 
@@ -121,43 +121,63 @@
     
     <!-- Contenido principal -->
     <div class="main_content">
-        <div class="edit_vehicle_container">
-            <h1>Editar Vehículo</h1>
-            <form id="edit_vehicle_form">
-                <div class="form_row">
-                    <div class="form_group">
-                        <label for="plate">Placa:</label>
-                        <input type="text" id="plate" name="plate" disabled> <!-- Placa inmutable -->
-                    </div>
-                    <div class="form_group">
-                        <label for="model">Modelo:</label>
-                        <input type="text" id="model" name="model" required>
-                    </div>
-                </div>
-                
-                <div class="form_row">
-                    <div class="form_group">
-                        <label for="brand">Marca:</label>
-                        <input type="text" id="brand" name="brand" required>
-                    </div>
-                    <div class="form_group">
-                        <label for="status">Estado:</label>
-                        <select id="status" name="status" required>
-                            <option value="activo">Activo</option>
-                            <option value="inactivo">Inactivo</option>
-                        </select>
-                    </div>
-                </div>
-
-                <button id="save_changes_button" type="button">Guardar Cambios</button>
+        
+        <div class="order_form_container">
+            <h2>Editar Orden de Compra</h2>
+            <form id="edit_order_form">
+                <label for="edit_order_number">Número de Orden:</label>
+                <input type="text" id="edit_order_number" disabled>
+    
+                <label for="edit_order_date">Fecha de Orden:</label>
+                <input type="date" id="edit_order_date">
+    
+                <label for="edit_store_name">Nombre de la Tienda:</label>
+                <input type="text" id="edit_store_name" disabled>
+    
+                <label for="edit_assigned_seller">Vendedor Asignado:</label>
+                <input type="text" id="edit_assigned_seller" disabled>
+    
+                <!-- Tabla de resumen de productos editados -->
+                <h3>Resumen de Productos</h3>
+                <table id="product_summary_table">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Marca</th>
+                            <th>Presentación</th>
+                            <th>Precio Unitario</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product_summary_body">
+                        <!-- Filas de productos editables generadas dinámicamente -->
+                    </tbody>
+                </table>
+    
+                <label for="edit_order_total">Total de la Orden:</label>
+                <input type="text" id="edit_order_total" disabled>
+    
+                <label for="edit_payment_type">Tipo de Pago:</label>
+                <input type="text" id="edit_payment_type" placeholder="Tipo de pago">
+    
+                <label for="edit_payment_status">Estado del Pago:</label>
+                <input type="text" id="edit_payment_status" placeholder="Estado del pago">
+    
+                <label for="edit_comments">Comentarios:</label>
+                <textarea id="edit_comments" placeholder="Escribe comentarios adicionales aquí"></textarea>
+    
+                <button type="button" onclick="saveEditedOrder()" class="save_order_button">Guardar Cambios</button>
             </form>
         </div>
+ 
     </div>
     
 </body>
     
     <!-- Script para el menú desplegable -->
     <script src="../js/main.js"></script>
-    <script src="../js/edit_vehicle.js"></script>
+    <script src="../js/edit_order.js"></script>
 
 </html>

@@ -1,0 +1,153 @@
+/* Contenedor de formulario de orden */
+.order_form_container {
+    width: 800px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 2px solid #0C254B;
+}
+
+/* Títulos y encabezados */
+.order_form_container h2, #product_list h3, #product_summary_table h3 {
+    color: #0C254B;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos de las etiquetas */
+.order_form_container label {
+    font-weight: bold;
+    color: #0C254B;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Estilos de los campos de entrada */
+.order_form_container input[type="text"],
+.order_form_container input[type="date"],
+.order_form_container select,
+.order_form_container textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Sección de productos */
+#product_list {
+    margin-top: 20px;
+}
+
+/* Entrada de producto individual */
+.product_entry_template {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.product_entry_template label {
+    color: #0C254B;
+    font-weight: bold;
+}
+
+/* Tabla de resumen de productos */
+#product_summary_table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#product_summary_table th, #product_summary_table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+#product_summary_table th {
+    background-color: #0C254B;
+    color: #fff;
+}
+
+/* Botón de acciones */
+.action_button {
+    padding: 8px 12px;
+    background-color: #F41F00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.action_button:hover {
+    background-color: #C0392B;
+}
+
+/* Botón para agregar producto */
+.add_product_button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #0C254B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+.add_product_button:hover {
+    background-color: #0A1F3C;
+}
+
+/* Botón para guardar la orden */
+.save_order_button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #0C254B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+.save_order_button:hover {
+    background-color: #0A1F3C;
+    color: #E1E00B;
+}
+
+/* Ajuste del campo de total de orden */
+#edit_order_total {
+    background-color: #f1f1f1;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Botón de eliminación de productos en la tabla */
+#product_summary_table .remove_button {
+    padding: 8px;
+    background-color: #F41F00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#product_summary_table .remove_button:hover {
+    background-color: #C0392B;
+}
+
+/* Ajustes específicos para la sección de comentarios */
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}

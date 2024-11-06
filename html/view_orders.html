@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú principal - La Junior Productos Alimenticios</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/edit_vehicle.css">
+    <link rel="stylesheet" href="../css/view_orders.css">
 
 </head>
 
@@ -121,43 +121,32 @@
     
     <!-- Contenido principal -->
     <div class="main_content">
-        <div class="edit_vehicle_container">
-            <h1>Editar Vehículo</h1>
-            <form id="edit_vehicle_form">
-                <div class="form_row">
-                    <div class="form_group">
-                        <label for="plate">Placa:</label>
-                        <input type="text" id="plate" name="plate" disabled> <!-- Placa inmutable -->
-                    </div>
-                    <div class="form_group">
-                        <label for="model">Modelo:</label>
-                        <input type="text" id="model" name="model" required>
-                    </div>
-                </div>
-                
-                <div class="form_row">
-                    <div class="form_group">
-                        <label for="brand">Marca:</label>
-                        <input type="text" id="brand" name="brand" required>
-                    </div>
-                    <div class="form_group">
-                        <label for="status">Estado:</label>
-                        <select id="status" name="status" required>
-                            <option value="activo">Activo</option>
-                            <option value="inactivo">Inactivo</option>
-                        </select>
-                    </div>
-                </div>
-
-                <button id="save_changes_button" type="button">Guardar Cambios</button>
-            </form>
+        
+        <div class="order_view_container">
+            <h2>Órdenes Guardadas</h2>
+            <table id="orders_table">
+                <thead>
+                    <tr>
+                        <th>Número de Orden</th>
+                        <th>Fecha</th>
+                        <th>Tienda</th>
+                        <th>Vendedor</th>
+                        <th>Total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="orders_body">
+                    <!-- Filas de órdenes generadas dinámicamente -->
+                </tbody>
+            </table>
         </div>
+ 
     </div>
     
 </body>
     
     <!-- Script para el menú desplegable -->
     <script src="../js/main.js"></script>
-    <script src="../js/edit_vehicle.js"></script>
+    <script src="../js/view_orders.js"></script>
 
 </html>

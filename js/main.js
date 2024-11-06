@@ -121,4 +121,3 @@ submenus.forEach((submenu, subIndex) => {
         saveMenuState(mainIndex, subIndex); // Guarda el índice principal y de submenú cuando se selecciona un submenú
     });
 });
-

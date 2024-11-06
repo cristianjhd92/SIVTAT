@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú principal - La Junior Productos Alimenticios</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/user_list.css">
+    <link rel="stylesheet" href="../css/create_store.css">
+
 
 </head>
 
@@ -142,22 +143,40 @@
     
     <!-- Contenido principal -->
     <div class="main_content">
-        <div class="user_list_container">
-            <h1>Lista de Usuarios</h1>
-            <table class="user_table">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Correo</th>
-                        <th>Rol</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="user_table_body">
-                    <!-- Los usuarios se agregarán dinámicamente aquí -->
-                </tbody>
-            </table>
+        <div class="create_store_container">
+            <h1>Crear Tienda</h1>
+            <!-- Formulario de creación de tienda -->
+            <form id="create_store_form">
+                <!-- Fila del formulario con nombre y dirección -->
+                <div class="form_row">
+                    <div class="form_group">
+                        <label for="store_name">Nombre de la Tienda:</label>
+                        <input type="text" id="store_name" name="store_name" placeholder="Ejemplo: Tienda Norte" required>
+                    </div>
+                    <div class="form_group">
+                        <label for="store_address">Dirección:</label>
+                        <input type="text" id="store_address" name="store_address" placeholder="Ejemplo: Calle 123" required>
+                    </div>
+                </div>
+
+                <!-- Fila del formulario con teléfono y estado -->
+                <div class="form_row">
+                    <div class="form_group">
+                        <label for="store_phone">Teléfono:</label>
+                        <input type="tel" id="store_phone" name="store_phone" placeholder="Ejemplo: 605 555 1234" required>
+                    </div>
+                    <div class="form_group">
+                        <label for="store_status">Estado:</label>
+                        <select id="store_status" name="store_status" required>
+                            <option value="activo">Activo</option>
+                            <option value="inactivo">Inactivo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Botón para guardar la tienda -->
+                <button id="create_store_button" type="button">Guardar Tienda</button>
+            </form>
         </div>
     </div>
     
@@ -165,8 +184,6 @@
     
     <!-- Script para el menú desplegable -->
     <script src="../js/main.js"></script>
-    <script src="../js/edit_user.js"></script>
-    <script src="../js/user_list.js"></script>
-    
+    <script src="../js/create_store.js"></script>
 
 </html>

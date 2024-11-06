@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú principal - La Junior Productos Alimenticios</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/user_list.css">
+    <link rel="stylesheet" href="../css/assign_vehicle.css">
 
 </head>
 
@@ -88,6 +88,7 @@
                     <li><a href="edit_vehicle.html">Editar Vehículo</a></li>
                     <li><a href="assign_vehicle.html">Asignación de Conductores</a></li>
                     <li><a href="vehicle_list.html">Lista de Vehículos y Conductores</a></li>
+                    
                 </ul>
 
             </li>
@@ -142,31 +143,51 @@
     
     <!-- Contenido principal -->
     <div class="main_content">
-        <div class="user_list_container">
-            <h1>Lista de Usuarios</h1>
-            <table class="user_table">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Correo</th>
-                        <th>Rol</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="user_table_body">
-                    <!-- Los usuarios se agregarán dinámicamente aquí -->
-                </tbody>
-            </table>
+        <div class="assign_vehicle_container">
+            <h1>Asignación de Conductores a Vehículos</h1>
+        
+        <!-- Selectores de vehículo y conductor con mensajes de advertencia -->
+        <div class="form_row">
+            <div class="select_group">
+                <label for="vehicle">Selecciona un Vehículo:</label>
+                <select id="vehicle" name="vehicle">
+                    <!-- Opciones de vehículos se generarán dinámicamente -->
+                </select>
+                <span id="vehicle_message" class="message"></span> <!-- Mensaje de advertencia para vehículo -->
+            </div>
+
+            <div class="select_group">
+                <label for="driver">Selecciona un Conductor:</label>
+                <select id="driver" name="driver">
+                    <!-- Opciones de conductores se generarán dinámicamente -->
+                </select>
+                <span id="driver_message" class="message"></span> <!-- Mensaje de advertencia para conductor -->
+            </div>
+        </div>
+
+        <button id="assign_button">Asignar Conductor</button>
+
+        <h2>Lista de Asignaciones</h2>
+        <table class="assignment_table">
+            <thead>
+                <tr>
+                    <th>Vehículo</th>
+                    <th>Conductor</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="assigned_drivers_list">
+                <!-- Asignaciones se generarán dinámicamente -->
+            </tbody>
+        </table>
         </div>
     </div>
     
 </body>
     
     <!-- Script para el menú desplegable -->
-    <script src="../js/main.js"></script>
-    <script src="../js/edit_user.js"></script>
-    <script src="../js/user_list.js"></script>
-    
+    <script src="../js/main.js"></script>    
+    <script src="../js/assign_vehicle.js"></script>    
+
 
 </html>

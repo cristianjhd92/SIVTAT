@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú principal - La Junior Productos Alimenticios</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/user_list.css">
+    <link rel="stylesheet" href="../css/product_list.css">
 
 </head>
 
@@ -142,22 +142,33 @@
     
     <!-- Contenido principal -->
     <div class="main_content">
-        <div class="user_list_container">
-            <h1>Lista de Usuarios</h1>
-            <table class="user_table">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Correo</th>
-                        <th>Rol</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="user_table_body">
-                    <!-- Los usuarios se agregarán dinámicamente aquí -->
-                </tbody>
-            </table>
+        <div class="product_list">
+            <div class="category_selection">
+                <label for="category_select">Selecciona una categoría:</label>
+                <select id="category_select" onchange="filterProductsByCategory()">
+                <!-- Las opciones de categorías se cargarán dinámicamente -->
+                </select>
+            </div>
+        
+            <div class="product_table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre del Producto</th>
+                            <th>Fabricante</th>
+                            <th>Categoría</th>
+                            <th>Presentación</th>
+                            <th>Precio Unitario</th>
+                            <th>Cantidad en Caja</th>
+                            <th>Precio x Caja</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product_table_body">
+                        <!-- Productos renderizados dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     
@@ -165,8 +176,6 @@
     
     <!-- Script para el menú desplegable -->
     <script src="../js/main.js"></script>
-    <script src="../js/edit_user.js"></script>
-    <script src="../js/user_list.js"></script>
-    
+    <script src="../js/product_list.js"></script>
 
 </html>

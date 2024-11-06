@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú principal - La Junior Productos Alimenticios</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/user_list.css">
+    <link rel="stylesheet" href="../css/edit_store.css">
 
 </head>
 
@@ -142,22 +142,36 @@
     
     <!-- Contenido principal -->
     <div class="main_content">
-        <div class="user_list_container">
-            <h1>Lista de Usuarios</h1>
-            <table class="user_table">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Correo</th>
-                        <th>Rol</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="user_table_body">
-                    <!-- Los usuarios se agregarán dinámicamente aquí -->
-                </tbody>
-            </table>
+        <div class="edit_store_container">
+            <h1>Editar Tienda</h1>
+            <form id="edit_store_form">
+                <div class="form_row">
+                    <div class="form_group">
+                        <label for="store_name">Nombre de la Tienda:</label>
+                        <input type="text" id="store_name" name="store_name" required>
+                    </div>
+                    <div class="form_group">
+                        <label for="store_address">Dirección:</label>
+                        <input type="text" id="store_address" name="store_address" required>
+                    </div>
+                </div>
+
+                <div class="form_row">
+                    <div class="form_group">
+                        <label for="store_phone">Teléfono:</label>
+                        <input type="tel" id="store_phone" name="store_phone" required>
+                    </div>
+                    <div class="form_group">
+                        <label for="store_status">Estado:</label>
+                        <select id="store_status" name="store_status" required>
+                            <option value="activo">Activo</option>
+                            <option value="inactivo">Inactivo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="save_changes_button" type="button">Guardar Cambios</button>
+            </form>
         </div>
     </div>
     
@@ -165,8 +179,7 @@
     
     <!-- Script para el menú desplegable -->
     <script src="../js/main.js"></script>
-    <script src="../js/edit_user.js"></script>
-    <script src="../js/user_list.js"></script>
+    <script src="../js/edit_store.js"></script>
     
 
 </html>

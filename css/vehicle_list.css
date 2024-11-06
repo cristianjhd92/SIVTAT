@@ -1,0 +1,90 @@
+/* Contenedor principal para las listas */
+.list_container {
+    max-width: 800px; /* Ajustado a 800px */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 2px solid #0C254B;
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilo individual para cada lista */
+.driver_list, .vehicle_list {
+    flex: 1;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #0C254B;
+}
+
+/* Título de cada lista */
+.driver_list h2, .vehicle_list h2 {
+    color: #0C254B;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Tablas de conductores y vehículos */
+.driver_table, .vehicle_table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.driver_table th, .vehicle_table th {
+    background-color: #0C254B;
+    color: white;
+    padding: 8px;
+}
+
+.driver_table td, .vehicle_table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Estilo para mensajes de lista vacía */
+.empty_message {
+    color: #888; /* Texto gris */
+    font-style: italic; /* Texto en cursiva */
+    text-align: center;
+}
+
+/* Hover en filas */
+.driver_table tr:hover, .vehicle_table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Botones de acción */
+.action_button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit_button {
+    background-color: #0C254B;
+    color: white;
+    margin-right: 5px;
+}
+
+.edit_button:hover {
+    background-color: #E1E00B;
+    color: black;
+}
+
+.delete_button {
+    background-color: #F41F00;
+    color: white;
+}
+
+.delete_button:hover {
+    background-color: #E1E00B;
+    color: black;
+}

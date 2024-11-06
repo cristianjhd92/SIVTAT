@@ -1,0 +1,77 @@
+/* Contenedor principal */
+.product_category_container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 2px solid #0C254B;
+}
+
+/* Título principal */
+.product_category_container h1 {
+    color: #0C254B;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Selector y campo de nueva categoría */
+.form_row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form_group label {
+    color: #0C254B;
+    font-weight: bold;
+}
+
+.form_group input,
+.form_group select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button#add_category_button {
+    margin-top: 1em;
+    padding: 8px 12px;
+    background-color: #F41F00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#add_category_button:hover {
+    background-color: #E1E00B;
+    color: black;
+}
+
+/* Tabla de productos */
+.product_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.product_table th, .product_table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.product_table th {
+    background-color: #0C254B;
+    color: white;
+}
+
+.no_products {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+}

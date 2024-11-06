@@ -1,0 +1,117 @@
+/* Contenedor principal */
+.assign_vehicle_container {
+    width: 800px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 2px solid #0C254B;
+}
+
+/* Título principal */
+.assign_vehicle_container h1 {
+    font-size: 1.5em;
+    color: #0C254B;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Estilos de formulario */
+.form_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.select_group {
+    flex: 1;
+    margin-right: 15px;
+}
+
+.select_group:last-child {
+    margin-right: 0;
+}
+
+label {
+    font-weight: bold;
+    color: #0C254B;
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Botón de asignación */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #F41F00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #E1E00B;
+    color: black;
+}
+
+/* Contenedor y tabla de asignaciones */
+.assignment_table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    border: 2px solid #0C254B;
+}
+
+.assignment_table th,
+.assignment_table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.assignment_table th {
+    background-color: #0C254B;
+    color: white;
+    font-weight: bold;
+}
+
+.assignment_table td {
+    color: #243238;
+}
+
+.no_data {
+    padding: 20px;
+    color: #888;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Botones de acción */
+.action_button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete_button {
+    background-color: #F41F00;
+    color: white;
+}
+
+.delete_button:hover {
+    background-color: #E1E00B;
+    color: black;
+}

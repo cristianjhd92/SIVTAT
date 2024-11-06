@@ -1,0 +1,99 @@
+/* Contenedor principal de la lista de productos */
+.product_list {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 2px solid #0C254B;
+}
+
+/* Sección de selección de categoría */
+.category_selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.category_selection label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #0C254B;
+}
+
+.category_selection select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 60%;
+    font-size: 1em;
+}
+
+/* Tabla de productos */
+.product_table table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    border: 2px solid #0C254B;
+}
+
+.product_table th, .product_table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+.product_table th {
+    background-color: #0C254B;
+    color: white;
+    font-weight: bold;
+}
+
+.product_table td.price-cell {
+    display: flex;
+    align-items: center;
+}
+
+.price-text {
+    margin-right: 5px;
+}
+
+.edit-price-input {
+    width: 60px;
+    padding: 5px;
+    display: none;
+}
+
+.no_products {
+    color: #888;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Botones */
+.edit_button, .delete_button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: background-color 0.3s;
+}
+
+.edit_button {
+    background-color: #0C254B;
+    color: white;
+}
+
+.delete_button {
+    background-color: #F41F00;
+    color: white;
+}
+
+.edit_button:hover, .delete_button:hover {
+    background-color: #E1E00B;
+    color: black;
+}

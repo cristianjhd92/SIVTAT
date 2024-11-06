@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú principal - La Junior Productos Alimenticios</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/user_list.css">
+    <link rel="stylesheet" href="../css/add_product.css">
 
 </head>
 
@@ -142,31 +142,39 @@
     
     <!-- Contenido principal -->
     <div class="main_content">
-        <div class="user_list_container">
-            <h1>Lista de Usuarios</h1>
-            <table class="user_table">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Correo</th>
-                        <th>Rol</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="user_table_body">
-                    <!-- Los usuarios se agregarán dinámicamente aquí -->
-                </tbody>
-            </table>
+        <div class="add_product_container">
+            <h1>Añadir Producto</h1>
+            <form id="add_product_form">
+                <label for="product_name">Nombre del Producto:</label>
+                <input type="text" id="product_name" placeholder="Ejemplo: Esencia sabor a Vainilla" required>
+        
+                <label for="product_manufacturer">Fabricante:</label>
+                <input type="text" id="product_manufacturer" placeholder="Ejemplo: La Junior" required>
+        
+                <label for="product_category">Categoría:</label>
+                <select id="product_category" required>
+                    <!-- Las opciones de categorías se cargarán dinámicamente -->
+                </select>
+        
+                <label for="product_presentation">Presentación:</label>
+                <input type="text" id="product_presentation" placeholder="Ejemplo: 250 ml" required>
+        
+                <label for="product_price">Precio Unitario:</label>
+                <input type="number" id="product_price" placeholder="Ejemplo: 3000" required>
+        
+                <label for="box_quantity">Cantidad en Caja:</label>
+                <input type="number" id="box_quantity" placeholder="Ejemplo: 24" required>
+        
+                <button type="button" onclick="addNewProduct()">Añadir Producto</button>
+            </form>
         </div>
+         
     </div>
     
 </body>
     
     <!-- Script para el menú desplegable -->
     <script src="../js/main.js"></script>
-    <script src="../js/edit_user.js"></script>
-    <script src="../js/user_list.js"></script>
-    
+    <script src="../js/add_product.js"></script>
 
 </html>

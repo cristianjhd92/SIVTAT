@@ -1,0 +1,66 @@
+/* Estilos para el contenedor principal del formulario */
+.create_store_container {
+    max-width: 700px;
+    margin: 10px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+/* Título centrado y con estilo */
+.create_store_container h1 {
+    text-align: center;
+    color: #0C254B;
+    margin-bottom: 20px;
+}
+
+/* Estilos para organizar los elementos en dos columnas */
+.form_row {
+    display: flex;
+    gap: 20px;
+}
+
+/* Contenedor individual de cada campo */
+.form_group {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+/* Estilos de etiquetas */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #0C254B;
+    font-weight: bold;
+}
+
+/* Estilos de entrada de texto y selector */
+input[type="text"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+/* Estilos para el botón de guardar */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #F41F00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #E1E00B;
+    color: black;
+}

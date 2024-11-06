@@ -1,0 +1,93 @@
+/* Contenedor principal para asignación de vendedores */
+.assign_seller_container {
+    width: 800px;
+    background-color: #ffffff;
+    margin: 10px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 2px solid #0C254B;
+    text-align: center;
+}
+
+/* Título principal */
+.assign_seller_container h1 {
+    font-size: 1.5em;
+    color: #0C254B;
+    margin-bottom: 15px;
+}
+
+/* Estilos de formulario */
+.form_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.select_group {
+    flex: 1;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    color: #0C254B;
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Mensaje de lista vacía en la tabla */
+.no_data {
+    padding: 20px;
+    color: #888;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Botón de asignación */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #F41F00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #E1E00B;
+    color: black;
+}
+
+/* Tabla de asignaciones */
+.assignment_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 2px solid #0C254B;
+}
+
+.assignment_table th,
+.assignment_table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.assignment_table th {
+    background-color: #0C254B;
+    color: white;
+    font-weight: bold;
+}

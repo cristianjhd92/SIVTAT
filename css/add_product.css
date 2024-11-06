@@ -1,0 +1,59 @@
+/* Contenedor principal para añadir productos */
+.add_product_container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 2px solid #0C254B;
+    text-align: center;
+}
+
+/* Título de la sección */
+.add_product_container h1 {
+    color: #0C254B;
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+#add_product_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Etiquetas del formulario */
+#add_product_form label {
+    font-weight: bold;
+    color: #0C254B;
+    text-align: left;
+}
+
+/* Campos de entrada */
+#add_product_form input[type="text"],
+#add_product_form input[type="number"],
+#add_product_form select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+/* Botón de añadir producto */
+#add_product_form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F41F00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+#add_product_form button:hover {
+    background-color: #E1E00B;
+    color: black;
+}

@@ -1,0 +1,77 @@
+.store_list_container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 2px solid #0C254B; /* Borde principal del contenedor */
+}
+
+/* Título de la lista de tiendas */
+.store_list_container h1 {
+    text-align: center;
+    color: #0C254B;
+    margin-bottom: 20px;
+}
+
+/* Estilos de la tabla de tiendas */
+.store_table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    border: 2px solid #0C254B; /* Borde para la tabla */
+}
+
+/* Estilos para los encabezados y celdas de la tabla */
+.store_table th,
+.store_table td {
+    padding: 12px;
+    border: 1px solid #ddd; /* Borde entre celdas */
+}
+
+/* Estilos para los encabezados de la tabla */
+.store_table th {
+    background-color: #0C254B;
+    color: white;
+}
+
+/* Estilos para las filas de la tabla cuando se pasa el cursor sobre ellas */
+.store_table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para los botones de acción */
+.action_button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+/* Estilos para el botón de editar */
+.edit_button {
+    background-color: #0C254B;
+    color: white;
+}
+
+/* Estilos para el botón de editar cuando se pasa el cursor sobre él */
+.edit_button:hover {
+    background-color: #E1E00B;
+    color: black;
+}
+
+/* Estilos para el botón de eliminar */
+.delete_button {
+    background-color: #F41F00;
+    color: white;
+    margin-left: 10px;
+}
+
+/* Estilos para el botón de eliminar cuando se pasa el cursor sobre él */
+.delete_button:hover {
+    background-color: #E1E00B;
+    color: black;
+}

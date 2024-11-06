@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú principal - La Junior Productos Alimenticios</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/user_list.css">
+    <link rel="stylesheet" href="../css/product_categories.css">
+
 
 </head>
 
@@ -142,31 +143,48 @@
     
     <!-- Contenido principal -->
     <div class="main_content">
-        <div class="user_list_container">
-            <h1>Lista de Usuarios</h1>
-            <table class="user_table">
+        <div class="product_category_container">
+            <h1>Administración de Categorías de Productos</h1>
+        
+            <!-- Selector de categoría -->
+            <div class="form_row">
+                <div class="form_group">
+                    <label for="category_select">Selecciona una Categoría:</label>
+                    <select id="category_select">
+                        <!-- Categorías predefinidas y creadas dinámicamente -->
+                    </select>
+                </div>
+                <!-- Campo para agregar nuevas categorías -->
+                <div class="form_group">
+                    <label for="new_category">Añadir Nueva Categoría:</label>
+                    <input type="text" id="new_category" placeholder="Nombre de la nueva categoría">
+                    <button id="add_category_button">Agregar Categoría</button>
+                </div>
+            </div>
+        
+            <!-- Tabla de productos de la categoría seleccionada -->
+            <h2>Productos en la Categoría Seleccionada</h2>
+            <table class="product_table">
                 <thead>
                     <tr>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Correo</th>
-                        <th>Rol</th>
+                        <th>Nombre del Producto</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody id="user_table_body">
-                    <!-- Los usuarios se agregarán dinámicamente aquí -->
+                <tbody id="product_list_body">
+                    <!-- Productos de la categoría seleccionada se generarán dinámicamente aquí -->
                 </tbody>
             </table>
         </div>
+        
     </div>
     
 </body>
     
     <!-- Script para el menú desplegable -->
     <script src="../js/main.js"></script>
-    <script src="../js/edit_user.js"></script>
-    <script src="../js/user_list.js"></script>
-    
+    <script src="../js/product_categories.js"></script>
 
 </html>

@@ -1,0 +1,53 @@
+/* Estilos para el contenedor del dashboard */
+.dashboard-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 2px solid #0C254B;
+    text-align: center;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.stat-box {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 22%;
+    margin: 10px;
+    text-align: center;
+}
+
+.stat-box h3 {
+    color: #0C254B;
+    font-size: 1.1em;
+}
+
+.stat-value {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #F41F00;
+}
+
+.charts-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.chart-box {
+    width: 45%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}

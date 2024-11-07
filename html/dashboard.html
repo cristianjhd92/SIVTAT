@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú principal - La Junior Productos Alimenticios</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+</head>
+
+<body>
+    
+    <!-- Encabezado superior con logos en los extremos y nombre de la empresa centrado -->
+    <div class="header">
+        <!-- Logo de la empresa en la esquina izquierda -->
+        <img src="../img/logo_la_junior_left.jpg" alt="Logo La Junior Izquierda" class="logo_left">
+        
+        <!-- Contener de texto con nombre de la empresa y sistema de información -->
+        <div class="header_text">
+            <h2>La Junior Productos Alimenticios</h2>
+            <p>Sistema de Información TaT</p>
+        </div>
+
+        <!-- Logo de la empresa en la esquina derecha -->
+        <img src="../img/logo_la_junior_right.jpg" alt="Logo La Junior Derecha" class="logo_right">
+    
+    </div>
+
+    <!-- Menú lateral izquierdo con título "Administración" -->
+    <div class="sidebar_left">
+        <h3 class="menu_title">Administración</h3>
+        
+        <!-- Lista de elementos de menú con submenús -->
+        <ul class="menu">
+            <!-- Elemento de menú con submenú -->
+            <li>
+                <!-- Enlace al elemento de menú -->
+                <a href="#user_management" class="menu_item">
+                    <!-- Ícono del elemento de menú -->
+                    <i class="icon icon-user"></i> Administración de Usuarios <span class="arrow">&#9662;</span>
+                </a>
+
+                <!-- Submenú desplegable -->
+                <ul class="submenu">
+                    <li><a href="create_user.html">Crear Usuario</a></li>
+                    <li><a href="edit_user.html">Editar Usuario</a></li>
+                    <li><a href="user_list.html">Lista de Usuarios</a></li>
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="#store_management" class="menu_item">
+                    <i class="icon icon-store"></i> Administración de Tiendas <span class="arrow">&#9662;</span>
+                </a>
+
+                <ul class="submenu">
+                    <li><a href="create_store.html">Crear Tienda</a></li>
+                    <li><a href="edit_store.html">Editar Tienda</a></li>
+                    <li><a href="store_list.html">Lista de Tiendas</a></li>
+                    <li><a href="assign_seller.html">Asignación de Vendedores</a></li>
+                </ul>
+            
+            </li>
+
+            <li>
+                <a href="#product_management" class="menu_item">
+                    <i class="icon icon-product"></i> Administración de Productos <span class="arrow">&#9662;</span>
+                </a>
+
+                <ul class="submenu">
+                    <li><a href="add_product.html">Añadir Producto</a></li>
+                    <li><a href="edit_product.html">Editar Producto</a></li>
+                    <li><a href="product_list.html">Lista de Productos</a></li>
+                    <li><a href="product_categories.html">Categorías de Productos</a></li>
+                </ul>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- Menú lateral derecho con título "Información" -->
+    <div class="sidebar_right">
+        <h3 class="menu_title">Información</h3>
+    
+        <ul class="menu">
+    
+            <li><a href="dashboard.html"><i class="icon icon-dashboard"></i> Dashboard</a></li>
+
+            <li>
+                <a href="#vehicle_management" class="menu_item">
+                    <i class="icon icon-vehicle"></i> Datos de Vehículos y Conductores <span class="arrow">&#9662;</span>
+                </a>
+
+                <ul class="submenu">
+                    <li><a href="add_vehicle.html">Añadir Vehículo</a></li>
+                    <li><a href="edit_vehicle.html">Editar Vehículo</a></li>
+                    <li><a href="assign_vehicle.html">Asignación de Conductores</a></li>
+                    <li><a href="vehicle_list.html">Lista de Vehículos y Conductores</a></li>
+                </ul>
+
+            </li>
+            
+            <li>
+                <a href="purchase_order_data.html" class="menu_item"><i class="icon icon-order"></i> Datos Orden de Compra <span class="arrow">&#9662;</span></a>
+                
+                <ul class="submenu">
+                    <li><a href="create_order.html">Crear Orden</a></li>
+                    <li><a href="view_orders.html">Ver Órdenes</a></li>
+                    <li><a href="edit_order.html">Editar Orden</a></li>
+                </ul>
+            
+            </li>
+        
+        </ul>
+    
+    </div>
+    
+    <!-- Contenido principal -->
+    <div class="main_content">
+        <div class="dashboard-container">
+            <h1>Dashboard de La Junior</h1>
+            <p>Resumen general del sistema de información</p>
+            
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h3>Total Ventas</h3>
+                    <p id="total-sales" class="stat-value"></p>
+                </div>
+                <div class="stat-box">
+                    <h3>Total Órdenes</h3>
+                    <p id="total-orders" class="stat-value"></p>
+                </div>
+                <div class="stat-box">
+                    <h3>Promedio por Orden</h3>
+                    <p id="average-order-value" class="stat-value"></p>
+                </div>
+                <div class="stat-box">
+                    <h3>Usuarios Activos</h3>
+                    <p id="active-users" class="stat-value"></p>
+                </div>
+            </div>
+        
+            <div class="charts-container">
+                <div class="chart-box">
+                    <canvas id="orderStatusChart"></canvas>
+                </div>
+                <div class="chart-box">
+                    <canvas id="salesChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+    
+    <!-- Script para el menú desplegable -->
+    <script src="../js/main.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</html>
